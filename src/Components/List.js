@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImRadioUnchecked, ImRadioChecked2, ImBin2 } from 'react-icons/im';
 
 export default class List extends React.Component {
     render() {
@@ -6,13 +7,22 @@ export default class List extends React.Component {
             <ul>
                 {this.props.list ?
                     this.props.list.map((e) => (
-                        <li className={e.done ? 'blue' : 'red'} key={e.id}>
-                            <button onClick={() => this.props.markItem(e)}><span>✔️</span></button>
-                            {e.text}
-                            <button onClick={() => this.props.onItemDeleted(e)}>Delete</button>
+                        <li key={e.id}>
+                            <div className="task">
+                                <button onClick={() => this.props.markItem(e)}>
+                                    {e.done ? (
+                                        <span><ImRadioChecked2 /></span>
+                                    ) :
+                                        (
+                                            <span><ImRadioUnchecked /></span>
+                                        )}
+                                </button>
+                                <span>{e.text}</span>
+                            </div>
+                            <button onClick={() => this.props.onItemDeleted(e)}><ImBin2 /></button>
                         </li>
                     )) :
-                    ''
+                    <li>No tasks to do</li>
                 }
             </ul>
         )

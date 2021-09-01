@@ -88,15 +88,19 @@
 
 
 .todoWrapper {
-    height: 100vh;
-    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .todoWrapper header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 15px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .todoWrapper header .userContainer {
@@ -189,15 +193,98 @@
     filter: brightness(1.2);
 }
 
-
-.percentBar {
-    height: 20px;
-    max-width: 200px;
+.allTasks {
+    background: #8e75e3;
+    padding: 10px;
+    max-width: 592px;
     width: 100%;
-    border: 1px solid #626262;
+    border-radius: 16px;
+    margin-top: 30px;
+}
+
+.allTasks p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.allTasks .taskCount {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.allTasks .taskCount span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.allTasks .taskCount .percentBar {
+    height: 7px;
+    margin-left: 5px;
+    max-width: 150px;
+    width: 100%;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.35);
+    overflow: hidden;
 }
 
 .percentBar .progress {
-    background-color: green;
+    background-color: #fff;
     height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.todoWrapper ul {
+    max-width: 592px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.todoWrapper ul li {
+    border: 1.3px solid #DBDBFB;
+    /* box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25); */
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    position: relative;
+}
+
+.todoWrapper ul li:not(:last-child):before {
+    content: "";
+    height: 11px;
+    width: 2px;
+    background: #DBDBFB;
+    position: absolute;
+    bottom: -12px;
+    left: 23px;
+}
+
+.todoWrapper ul li .task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoWrapper ul li .task>span {
+    font-size: 1rem;
+    color: #626262;
+    font-weight: 700;
+}
+
+.todoWrapper ul li .task button,
+.todoWrapper ul li button {
+    border: none;
+    background: transparent;
+    color: #8e75e3;
+    font-size: 1rem;
 }

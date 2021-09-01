@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 
 import Login from './Components/LogIn';
+import UserTodo from './Components/CheckLogin';
 import Todo from './Components/ToDo';
 
 export default class Routes extends React.Component {
@@ -10,7 +11,7 @@ export default class Routes extends React.Component {
             <BrowserRouter>
                 <Switch>
                     <Route path="/signin" component={Login} />
-                    <Route path="/" component={Todo} />
+                    <UserTodo path="/" component={Todo} />
                 </Switch>
             </BrowserRouter>
         )
