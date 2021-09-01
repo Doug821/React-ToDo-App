@@ -1,46 +1,203 @@
-.App {
-  text-align: center;
+.logInWrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #8e75e3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logInWrapper .logo {
+    max-width: 160px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logInWrapper h1 {
+    color: #828282;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logInWrapper h1 span {
+    margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.logInWrapper .logInCard {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logInWrapper .logInCard form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.blue {
-  background: blue;
+.logInWrapper .logInCard form input {
+    width: 250px;
+    height: 24px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
+    border: 1.3px solid transparent;
+    border-radius: 12px;
+    padding: 5px 15px;
+    margin-bottom: 30px;
+    outline: none;
 }
 
-.red {
-  background: red;
+.logInWrapper .logInCard form input:focus {
+    border: 1.3px solid #8e75e3;
+}
+
+.logInWrapper .logInCard form input::placeholder {
+    font-weight: 400;
+    color: #b5b5b5;
+}
+
+
+.logInWrapper .logInCard form button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    width: 250px;
+    background: #8e75e3;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logInWrapper .logInCard form button:hover {
+    filter: brightness(1.2);
+}
+
+
+/* Todo Screen */
+
+
+.todoWrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+.todoWrapper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15px;
+}
+
+.todoWrapper header .userContainer {
+    display: flex;
+    align-items: center;
+}
+
+.todoWrapper header .userContainer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+}
+
+.todoWrapper header .userContainer .userName {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.todoWrapper header .userContainer .userName h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #626262;
+}
+
+.todoWrapper header .userContainer .userName h3 {
+    font-size: 0.8rem;
+    margin: 3px 0 0;
+    color: #b5b5b5;
+}
+
+.todoWrapper header .date span {
+    font-size: 0.9rem;
+    color: #b5b5b5;
+    font-weight: 700;
+}
+
+.todoWrapper header .date p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #626262;
+    margin: 3px 0 0;
+}
+
+.todoWrapper form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoWrapper form input {
+    width: 500px;
+    height: 24px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
+    border: 1.3px solid transparent;
+    border-radius: 8px;
+    padding: 5px 15px;
+    outline: none;
+}
+
+.todoWrapper form input:focus {
+    border: 1.3px solid #8e75e3;
+}
+
+.todoWrapper form input::placeholder {
+    font-weight: 400;
+    color: #b5b5b5;
+}
+
+.todoWrapper form button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    height: 36.6px;
+    text-align: center;
+    width: 40px;
+    margin-left: 20px;
+    background: #8e75e3;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.todoWrapper form button:hover {
+    filter: brightness(1.2);
+}
+
+
+.percentBar {
+    height: 20px;
+    max-width: 200px;
+    width: 100%;
+    border: 1px solid #626262;
+}
+
+.percentBar .progress {
+    background-color: green;
+    height: 100%;
 }
